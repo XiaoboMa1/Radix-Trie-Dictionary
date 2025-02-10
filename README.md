@@ -1,7 +1,8 @@
 # Radix Trie Dictionary with Path Compression
 
 ## Overview
-This project implements a highly efficient Radix Trie with path compression, designed to store and query large dictionaries. The data structure utilizes advanced memory management strategies—including a custom node pool and a large label pool—to reduce memory fragmentation and support over one million words with minimal overhead.
+This project implements a highly efficient Radix Trie with path compression, designed to store and query large dictionaries. The data structure utilizes advanced memory management strategies—including a custom node pool and a large label pool—to reduce memory fragmentation and support millions of words with minimal overhead.
+It is ideal for high-concurrency and high-performance architectures.
 
 ## Data Structures & Algorithms
 - **Radix Trie with Path Compression**: Each edge in the trie stores a string rather than a single character, significantly reducing the total number of nodes.
@@ -20,4 +21,8 @@ This project implements a highly efficient Radix Trie with path compression, des
 
 ## How to Use
 1. Place your word list files in the `resources` directory.
-2. Compile the project using the provided Makefile:
+2. Compile the project using the provided Makefile: Run ```make```
+3. Run the program and provide a prefix as an argument: ```./test_large <your_prefix>```
+
+This will return the top 5 suggestions for words starting with your prefix. If no prefix is provided, the program will run default performance tests.
+
