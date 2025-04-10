@@ -1,0 +1,20 @@
+[
+{
+  "directory": "F:/git_local/Radix-Tree/build",
+  "command": "D:\\Programming\\mingw64\\bin\\g++.exe  @CMakeFiles/radix_tree.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\radix_tree.dir\\src\\radixTree.cpp.obj -c F:\\git_local\\Radix-Tree\\src\\radixTree.cpp",
+  "file": "F:/git_local/Radix-Tree/src/radixTree.cpp",
+  "output": "CMakeFiles/radix_tree.dir/src/radixTree.cpp.obj"
+},
+{
+  "directory": "F:/git_local/Radix-Tree/build",
+  "command": "D:\\Programming\\mingw64\\bin\\g++.exe  @CMakeFiles/transaction_producer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\transaction_producer.dir\\src\\TransactionProducer.cpp.obj -c F:\\git_local\\Radix-Tree\\src\\TransactionProducer.cpp",
+  "file": "F:/git_local/Radix-Tree/src/TransactionProducer.cpp",
+  "output": "CMakeFiles/transaction_producer.dir/src/TransactionProducer.cpp.obj"
+},
+{
+  "directory": "F:/git_local/Radix-Tree/build",
+  "command": "D:\\Programming\\mingw64\\bin\\g++.exe  @CMakeFiles/transaction_consumer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\transaction_consumer.dir\\src\\TransactionConsumer.cpp.obj -c F:\\git_local\\Radix-Tree\\src\\TransactionConsumer.cpp",
+  "file": "F:/git_local/Radix-Tree/src/TransactionConsumer.cpp",
+  "output": "CMakeFiles/transaction_consumer.dir/src/TransactionConsumer.cpp.obj"
+}
+]

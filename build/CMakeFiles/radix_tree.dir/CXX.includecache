@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/RadixTree.h
+string
+-
+memory
+-
+vector
+-
+array
+-
+algorithm
+-
+functional
+-
+
+/app/src/radixTree.cpp
+RadixTree.h
+/app/src/RadixTree.h
+algorithm
+-
+cstring
+-
+queue
+-
+stack
+-
+cassert
+-
+fstream
+-
+fstream
+-
+

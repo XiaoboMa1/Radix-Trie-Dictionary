@@ -1,0 +1,2 @@
+D:\Programming\mingw64\bin\ar.exe qc libradix_tree.a CMakeFiles/radix_tree.dir/src/radixTree.cpp.obj
+D:\Programming\mingw64\bin\ranlib.exe libradix_tree.a

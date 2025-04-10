@@ -1,0 +1,3 @@
+D:\Programming\cmake-4.0.0-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\transaction_producer.dir/objects.a
+D:\Programming\mingw64\bin\ar.exe qc CMakeFiles\transaction_producer.dir/objects.a @CMakeFiles\transaction_producer.dir\objects1.rsp
+D:\Programming\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\transaction_producer.dir/objects.a -Wl,--no-whole-archive -o transaction_producer.exe -Wl,--out-implib,libtransaction_producer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\transaction_producer.dir\linkLibs.rsp

@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.10)
+project(RadixTree)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 仅包含必要的源文件，移除draft.cpp
+add_executable(FinancialDemo
+    FinancialDemo.cpp
+    RadixTree.cpp
+)
+
+# 包含当前目录以确保能找到头文件
+target_include_directories(FinancialDemo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

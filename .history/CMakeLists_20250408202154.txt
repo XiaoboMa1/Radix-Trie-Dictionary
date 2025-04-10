@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+project(FinancialTextAnalytics)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 添加第三方依赖
+find_package(Threads REQUIRED)  # 支持多线程
+
+# 添加RadixTree库子目录
+add_subdirectory(lib)
+
+# 主可执行文件
+add_executable(financialDemo
+    integration/demo/FinancialDemo.cpp
+)
+
+# 链接RadixTree库
+target_link_libraries(financialDemo
+    PRIVATE radixtree
+    PRIVATE Threads::Threads
+)

@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.10)
+project(RadixTreeKafka)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# 寻找librdkafka
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(RDKAFKA REQUIRED rdkafka++)
+
+# 包含目录
+include_directories(
+    ${RDKAFKA_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/include
+)
+
+# 库文件目录
+link_directories(${RDKAFKA_LIBRARY_DIRS})
+
+# 生成RadixTree库
+add_library(radix_tree STATIC
+    lib/src/RadixTree.cpp
+)
+
+# 生成Kafka生产者可执行文件
+add_executable(transaction_producer
+    integration/Kafka/TransactionProducer.cpp
+)
+target_link_libraries(transaction_producer
+    radix_tree
+    ${RDKAFKA_LIBRARIES}
+)
+
+# 生成Kafka消费者可执行文件 
+add_executable(transaction_consumer
+    integration/Kafka/TransactionConsumer.cpp
+)
+target_link_libraries(transaction_consumer
+    radix_tree
+    ${RDKAFKA_LIBRARIES}
+)

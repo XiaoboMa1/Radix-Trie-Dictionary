@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RadixTreeKafka",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "radix_tree::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-radix_tree-Debug-5198c3c7c33799012515.json",
+					"name" : "radix_tree",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "transaction_consumer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-transaction_consumer-Debug-326f90846e4c60e11d7e.json",
+					"name" : "transaction_consumer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "transaction_producer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-transaction_producer-Debug-aaa1a3a75b376fdf8475.json",
+					"name" : "transaction_producer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/git_local/Radix-Tree/build",
+		"source" : "F:/git_local/Radix-Tree"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

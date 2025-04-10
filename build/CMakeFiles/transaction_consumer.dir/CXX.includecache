@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/app/include/radixTree.h
+string
+-
+memory
+-
+vector
+-
+array
+-
+algorithm
+-
+functional
+-
+
+/app/src/TransactionConsumer.cpp
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+map
+-
+chrono
+-
+sstream
+-
+iomanip
+-
+algorithm
+-
+librdkafka/rdkafkacpp.h
+-
+../include/radixTree.h
+/app/include/radixTree.h
+

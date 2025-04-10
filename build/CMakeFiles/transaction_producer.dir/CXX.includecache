@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/app/src/TransactionProducer.cpp
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+thread
+-
+chrono
+-
+librdkafka/rdkafkacpp.h
+-
+

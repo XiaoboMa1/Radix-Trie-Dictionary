@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+project(RadixTree)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set CMAKE_CXX_COMPILER=D:\Programming\cmake-4.0.0-windows-x86_64\bin\cmake.exe
+
+# 仅包含必要的源文件，移除draft.cpp
+add_executable(financialDemo
+    financialDemo.cpp
+    radixTree.cpp
+)

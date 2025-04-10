@@ -1,0 +1,3 @@
+D:\Programming\cmake-4.0.0-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\transaction_consumer.dir/objects.a
+D:\Programming\mingw64\bin\ar.exe qc CMakeFiles\transaction_consumer.dir/objects.a @CMakeFiles\transaction_consumer.dir\objects1.rsp
+D:\Programming\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\transaction_consumer.dir/objects.a -Wl,--no-whole-archive -o transaction_consumer.exe -Wl,--out-implib,libtransaction_consumer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\transaction_consumer.dir\linkLibs.rsp

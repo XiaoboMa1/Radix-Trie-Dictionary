@@ -1,0 +1,52 @@
+cmake_minimum_required(VERSION 3.10)
+project(RadixTreeKafka)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# 包含目录
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/include
+)
+
+# 如果使用Windows本地编译，可能需要指定librdkafka位置
+if(WIN32)
+    # 如果使用MinGW，可能需要调整这些路径
+    set(RDKAFKA_INCLUDE_DIR "D:/Programming/librdkafka/include")
+    set(RDKAFKA_LIB_DIR "D:/Programming/librdkafka/lib")
+    
+    include_directories(${RDKAFKA_INCLUDE_DIR})
+    link_directories(${RDKAFKA_LIB_DIR})
+else()
+    # 在Linux/WSL中查找librdkafka
+    include_directories(/usr/local/include)
+    link_directories(/usr/local/lib)
+endif()
+
+# 查找RadixTree源文件(解决大小写问题)
+file(GLOB RADIX_TREE_SRC "${CMAKE_CURRENT_SOURCE_DIR}/lib/src/[Rr]adix[Tt]ree.cpp")
+
+# 显示找到的文件路径(调试用)
+message(STATUS "Found RadixTree source: ${RADIX_TREE_SRC}")
+
+# 生成RadixTree库
+add_library(radix_tree STATIC ${RADIX_TREE_SRC})
+
+# 生成Kafka生产者可执行文件
+add_executable(transaction_producer
+    ${CMAKE_CURRENT_SOURCE_DIR}/integration/Kafka/TransactionProducer.cpp
+)
+target_link_libraries(transaction_producer
+    radix_tree
+    rdkafka++
+    rdkafka
+)
+
+# 生成Kafka消费者可执行文件 
+add_executable(transaction_consumer
+    ${CMAKE_CURRENT_SOURCE_DIR}/integration/Kafka/TransactionConsumer.cpp
+)
+target_link_libraries(transaction_consumer
+    radix_tree
+    rdkafka++
+    rdkafka
+)

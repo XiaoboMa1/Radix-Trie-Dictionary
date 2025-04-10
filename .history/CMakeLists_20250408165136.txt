@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+project(RadixTree)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 如需指定编译器，使用正确的路径和语法
+# set(CMAKE_CXX_COMPILER D:/Programming/mingw64/bin/g++.exe)
+
+# 仅包含必要的源文件
+add_executable(financialDemo
+    financialDemo.cpp
+    radixTree.cpp
+)
+
+# 包含当前目录以确保能找到头文件
+target_include_directories(financialDemo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

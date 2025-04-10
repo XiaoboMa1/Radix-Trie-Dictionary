@@ -1,0 +1,22 @@
+services:
+  # 现有的服务...
+  
+  kafka-cpp-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: kafka-cpp-app
+    depends_on:
+      - kafka
+    volumes:
+      - ..:/app
+    environment:
+      KAFKA_BROKER: kafka:29092
+    command: >
+      bash -c "cd /app && 
+      mkdir -p build && 
+      cd build && 
+      cmake .. && 
+      make -j$(nproc) && 
+      cd /app/integration/Kafka && 
+      ./transaction_producer --brokers kafka:29092"
