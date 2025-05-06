@@ -14,13 +14,12 @@ namespace radix {
 enum class EntityType {
     GENERIC = 0,
     COMPANY = 1, 
-    PERSON=2, 
-    CRYPTO_WALLET = 3,       
-    LEGAL_ENTITY = 4,        
-    VESSEL = 5,             
-    ORGANIZATION = 6,               
-    RISK_INDICATOR = 7,        
-    METRIC = 8           
+    PERSON=2,   
+    LEGAL_ENTITY = 3,        
+    VESSEL = 4,             
+    ORGANIZATION = 5,               
+    RISK_INDICATOR = 6,        
+    METRIC = 7           
 };
 
 // 添加EntityMatch结构体
